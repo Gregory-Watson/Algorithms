@@ -1,0 +1,10 @@
+#1. Two Sum
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        i = 0
+        for x in nums:
+            for y in nums[i+1:]:
+                if x + y == target:
+                    return [i,nums[i+1:].index(y)+i+1]  
+            i += 1
+           
